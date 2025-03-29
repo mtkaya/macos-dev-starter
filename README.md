@@ -1,31 +1,40 @@
 # 🧠 macOS Developer Starter Kit
+
 A macOS development starter kit for Python, AI, and LLM projects. Includes setup script, environment tools, and test code.
-
-
 
 Bu repo, Python ve AI/LLM (Large Language Model) geliştirme yapan geliştiriciler için **macOS ortamına özel** hazırlanmış bir başlangıç setidir. Amacı, hem Anaconda hem de Visual Studio Code ile uyumlu, GPU/CPU fark etmeksizin çalışan bir temel geliştirme ortamı sunmaktır.
 
+---
+
 ## 🚀 Neler İçerir?
 
-- Homebrew ile temel yazılımların kurulumu
-- Pyenv ile Python ortamının yönetimi
-- VS Code eklentilerinin kurulumu
-- AI ve LLM projeleri için geniş `requirements.txt`
-- HuggingFace + Transformers destekli LLM test kodu (`llm_test.py`)
-- Terminal üzerinden tek komutla çalışan `setup.sh` script’i
+✅ Homebrew ile temel yazılımların kurulumu  
+✅ Pyenv ile Python ortamının yönetimi  
+✅ VS Code eklentilerinin kurulumu  
+✅ AI ve LLM projeleri için geniş `requirements.txt`  
+✅ HuggingFace + Transformers destekli LLM test kodu (`llm_test.py`)  
+✅ Terminal üzerinden tek komutla çalışan `setup.sh` script’i  
+
+---
 
 ## ⚙️ Kurulum
 
-bash
+```bash
 git clone https://github.com/kullaniciadi/macos-dev-starter.git
 cd macos-dev-starter
 chmod +x setup.sh
 ./setup.sh
+```
 
+> 🛠 `setup.sh` dosyasını çalıştırdığınızda gerekli tüm kurulumlar otomatik gerçekleşir.
 
-## ⚙️ Setup.sh Kurulumu
+---
 
+## 📜 `setup.sh` Script İçeriği
+
+```bash
 #!/bin/bash
+set -e
 
 # MacOS Python AI Geliştirici Ortamı Kurulum Scripti
 # Bu script Homebrew, pyenv, VS Code, Python paketleri ve temel AI tool'larını kurar
@@ -96,3 +105,33 @@ EOF
 
 # 8. Tamamlandı
 echo "[TAMAMLANDI] Ortam kuruldu. llm_test.py dosyası ile test edebilirsin."
+```
+
+---
+
+## ✅ Test
+
+Kurulum tamamlandığında, terminalde aşağıdaki komutu çalıştırarak ortamı test edebilirsin:
+
+```bash
+python llm_test.py
+```
+
+Bu işlem, Hugging Face üzerinden bir LLM (sentiment analysis) modeli indirip basit bir metni analiz eder.
+
+---
+
+## 📂 Repo Yapısı
+
+```bash
+macos-dev-starter/
+├── README.md
+├── setup.sh
+├── requirements.txt  # script tarafından oluşturulur
+├── llm_test.py       # script tarafından oluşturulur
+```
+
+---
+
+Happy coding! 💻✨
+
