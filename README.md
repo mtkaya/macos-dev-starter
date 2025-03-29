@@ -21,3 +21,4 @@ git clone https://github.com/kullaniciadi/macos-dev-starter.git
 cd macos-dev-starter
 chmod +x setup.sh
 ./setup.sh
+
